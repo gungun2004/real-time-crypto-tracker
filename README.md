@@ -40,6 +40,7 @@ This application displays cryptocurrency prices fetched from the CoinGecko API a
 1. **Clone the repository:**
    ```bash
    git clone 
+   git clone https://github.com/gungun2004/real-time-crypto-tracker
    cd crypto-tracker
    ```
 2. **Install dependencies:**
