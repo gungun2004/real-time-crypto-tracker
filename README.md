@@ -2,6 +2,7 @@
 
 This application displays cryptocurrency prices fetched from the CoinGecko API and simulates real-time updates using React and Redux Toolkit for state management.
 
+
 ## Features
 
 - Displays key data for selected cryptocurrencies in a responsive table.
@@ -53,9 +54,10 @@ This application displays cryptocurrency prices fetched from the CoinGecko API a
 
 ## Demo Video
 
-<video controls width="100%">
-  <source src="./src/assets/images/cryptotracker.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/a880fefb-ab64-4462-85ec-c06a0ec30b86
+
+
 
 ---
