@@ -40,6 +40,12 @@
   font-size: 0.9rem;
 }
 
+.cryptoTableContainer {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  margin: 0 auto;
+  max-width: 100%; /* Ensure the container doesn't exceed the screen width */
+}
+
 .cryptoTable {
   width: 100%;
   border-collapse: collapse;
@@ -50,6 +56,7 @@
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
+  white-space: nowrap; /* Prevent text wrapping in cells */
 }
 
 .cryptoTable th {
@@ -76,6 +83,17 @@
     .appHeader h1 {
         font-size: 1.5rem;
     }
+    .cryptoTable th:nth-child(6), /* Hide 7d % column */
+    .cryptoTable th:nth-child(10), /* Hide Max Supply column */
+    .cryptoTable td:nth-child(6),
+    .cryptoTable td:nth-child(10) {
+        display: none;
+    }
+
+    .cryptoTable th, .cryptoTable td {
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+        padding: 6px;
+    }
 }
 @media (max-width: 480px) {
     .appMain {
@@ -86,5 +104,46 @@
      }
     .appHeader h1 {
         font-size: 1.3rem;
+    }
+
+    .cryptoTable {
+        display: block; /* Make the table block-level */
+    }
+
+    .cryptoTable thead {
+        display: none; /* Hide the table header */
+    }
+
+    .cryptoTable tbody tr {
+        display: block; /* Make each row block-level */
+        margin-bottom: 10px; /* Add spacing between rows */
+        border: 1px solid #ddd; /* Add border for card-like appearance */
+        border-radius: 5px;
+        background-color: #ffffff; /* Add a white background for better readability */
+        color: #000000; /* Change text color to black */
+    }
+
+    .cryptoTable td {
+        display: flex; /* Use flexbox for label-value pairs */
+        justify-content: space-between;
+        padding: 10px;
+        border: none; /* Remove borders between cells */
+        border-bottom: 1px solid #ddd; /* Add a bottom border for separation */
+    }
+
+    .cryptoTable td:last-child {
+        border-bottom: none; /* Remove the bottom border for the last cell */
+    }
+
+    .cryptoTable td::before {
+        content: attr(data-label); /* Use the `data-label` attribute as a label */
+        font-weight: bold;
+        flex-basis: 50%; /* Allocate space for the label */
+        text-align: left;
+    }
+
+    .cryptoTable th, .cryptoTable td {
+        font-size: 0.8rem; /* Further reduce font size for very small screens */
+        padding: 4px;
     }
 }

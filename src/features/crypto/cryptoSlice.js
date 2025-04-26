@@ -3,7 +3,7 @@ import { fetchMarketData } from './cryptoAPI';
 
 // Async thunk for fetching initial data
 export const fetchCoins = createAsyncThunk('crypto/fetchCoins', async () => {
-  const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true');
+  const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=true'); // Increased per_page to 50 to fetch more rows
   if (!response.ok) {
     throw new Error('Failed to fetch coins data');
   }
