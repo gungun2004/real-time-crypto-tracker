@@ -53,6 +53,9 @@ This application displays cryptocurrency prices fetched from the CoinGecko API a
 
 ## Demo Video
 
-[Watch the full video walkthrough](./src/assets/images/cryptotracker.mp4)
+<video controls width="100%">
+  <source src="./src/assets/images/cryptotracker.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
