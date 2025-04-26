@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Real-Time Crypto Price Tracker (React + Redux Toolkit)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application displays cryptocurrency prices fetched from the CoinGecko API and simulates real-time updates using React and Redux Toolkit for state management.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+*   Displays key data for selected cryptocurrencies (BTC, ETH, USDT, XRP, ADA) in a responsive table.
+*   Fetches initial data from the CoinGecko API.
+*   Simulates real-time price, volume, and percentage changes every ~1.5 seconds using `setInterval`.
+*   Uses Redux Toolkit for all application state management (`createSlice`, `createAsyncThunk`, `configureStore`).
+*   Uses CSS Modules for styling (No Tailwind/PostCSS).
+*   Color-codes percentage changes (Green for positive, Red for negative).
+*   Responsive table layout hides less critical columns on smaller screens.
+*   Includes loading and error states.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Frontend:** React
+*   **State Management:** Redux Toolkit, React-Redux
+*   **API Client:** Axios
+*   **Styling:** CSS Modules, Plain CSS
+*   **API:** CoinGecko API (v3)
+*   **Build Tool:** Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture
 
-### `npm test`
+*   **`src/App.js`:** Main application component, orchestrates initial data fetch and simulation setup.
+*   **`src/components/CryptoTable`:** Contains the `CryptoTable` component (renders the table structure) and `CryptoRow` component (renders a single row, memoized for performance).
+*   **`src/features/crypto`:** Contains Redux logic:
+    *   `cryptoSlice.js`: Defines the Redux state slice (initial state, reducers, async thunk for fetching, selectors).
+    *   `cryptoAPI.js`: Handles communication with the CoinGecko API.
+*   **`src/hooks/useWebSocketSimulator.js`:** Custom hook encapsulating the `setInterval` logic to simulate data updates and dispatch Redux actions.
+*   **`src/app/store.js`:** Configures the Redux store.
+*   **`src/assets`:** Static assets (e.g., placeholder chart SVG).
+*   **Styling:** CSS Modules (`*.module.css`) are used for component-scoped styles. Global styles are in `src/index.css`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup and Installation
 
-### `npm run build`
+1.  **Clone the repository:**
+    ```bash
+    git clone <your-repo-url>
+    cd crypto-tracker
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    npm start
+    ```
+    The application will open automatically in your browser at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Demo video 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Watch the full video walkthrough](https://via.placeholder.com/your-video-link)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**(Replace the placeholder links with actual links to your demo GIF and video walkthrough)**

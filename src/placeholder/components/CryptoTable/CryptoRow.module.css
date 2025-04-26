@@ -1,0 +1,157 @@
+/* CryptoRow.module.css */
+.cryptoRow {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+  }
+  
+  .cryptoRow:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .cryptoRow td {
+    padding: 12px 10px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 0.9rem; /* Base font size */
+  }
+  
+  .rank {
+      text-align: center;
+      color: #555;
+  }
+  
+  .nameCell {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 15px; /* More padding for the first content cell */
+  }
+  
+  .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .nameSymbol {
+      display: flex;
+      flex-direction: column; /* Stack name and symbol */
+  }
+  
+  .name {
+    font-weight: bold;
+    white-space: nowrap; /* Prevent name wrapping */
+    color: black; /* Set name color to black */
+  }
+  
+  .symbol {
+    font-size: 0.8rem;
+    color: #666;
+    text-transform: uppercase;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: black; /* Set price color to black */
+  }
+  
+  .percentChange,
+  .percentChange7d {
+    font-weight: 500;
+  }
+  
+  .positive {
+    color: #16c784; /* Green */
+  }
+  
+  .negative {
+    color: #ea3943; /* Red */
+  }
+  
+  .neutral {
+      color: #555; /* Grey for N/A */
+  }
+  
+  
+  .marketCap,
+  .volume,
+  .supply,
+  .maxSupply {
+    color: #333;
+  }
+  
+  .maxSupply {
+      white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .chart {
+      text-align: center; /* Center the chart */
+  }
+  
+  .sparkline {
+      display: inline-block; /* Ensure it behaves like an inline element */
+      vertical-align: middle; /* Align nicely with text if needed */
+      max-width: 100px; /* Limit chart width */
+      height: auto;
+  }
+  
+  /* --- Responsive Adjustments --- */
+  
+  /* Hide less important columns on smaller screens */
+  @media (max-width: 1024px) {
+    .maxSupply, .percentChange7d {
+      display: none; /* Hide Max Supply & 7d % */
+    }
+    .cryptoRow td {
+        padding: 10px 8px; /* Slightly reduce padding */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .supply, .chart {
+      display: none; /* Hide Circulating Supply & Chart */
+    }
+     .cryptoRow td {
+         font-size: 0.85rem; /* Smaller font on tablets */
+     }
+      .logo {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px;
+      }
+      .nameCell {
+          padding-left: 10px;
+      }
+  }
+  
+  @media (max-width: 600px) {
+    .marketCap, .percentChange { /* Hide 1h % and Market Cap */
+      display: none;
+    }
+     .cryptoRow td {
+         padding: 8px 5px; /* Further reduce padding */
+     }
+     .price {
+         font-size: 0.8rem; /* Make price smaller on mobile */
+     }
+      .name {
+          font-size: 0.85rem;
+      }
+      .symbol {
+          font-size: 0.75rem;
+      }
+  }
+  
+  @media (max-width: 480px) {
+     .volume {
+          display: none; /* Hide Volume on very small screens */
+     }
+     .nameSymbol {
+         flex-direction: row; /* Put name and symbol side-by-side */
+         align-items: baseline;
+         gap: 5px;
+     }
+      .name {
+          font-weight: 500;
+      }
+  }

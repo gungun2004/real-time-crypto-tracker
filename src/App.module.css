@@ -1,0 +1,90 @@
+/* App.module.css */
+.app {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.appHeader {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 150px; /* Increase size */
+  height: 150px; /* Ensure it's a square */
+  border-radius: 50%; /* Make it round */
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the image scales properly */
+}
+
+.appMain {
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.appFooter {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.cryptoTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.cryptoTable th, .cryptoTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.cryptoTable th {
+  background-color: #2a5298;
+  color: white;
+}
+
+.placeholderRow {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.placeholderCell {
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Responsive padding for main content */
+@media (max-width: 768px) {
+    .appMain {
+        padding: 15px;
+    }
+    .appHeader h1 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .appMain {
+        padding: 10px;
+    }
+     .appHeader {
+        padding: 10px 15px;
+     }
+    .appHeader h1 {
+        font-size: 1.3rem;
+    }
+}
