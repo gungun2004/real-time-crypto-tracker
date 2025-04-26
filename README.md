@@ -2,6 +2,7 @@
 
 This application displays cryptocurrency prices fetched from the CoinGecko API and simulates real-time updates using React and Redux Toolkit for state management.
 
+![Screenshot (6)](https://github.com/user-attachments/assets/f19b2360-1589-4940-be37-3d38bc38253b)
 
 ## Features
 
@@ -22,6 +23,8 @@ This application displays cryptocurrency prices fetched from the CoinGecko API a
 - **Styling:** CSS Modules, Plain CSS
 - **API:** CoinGecko API (v3)
 - **Build Tool:** Create React App
+  ![Screenshot (7)](https://github.com/user-attachments/assets/1037d647-6516-4c96-947c-bf6e71b37dc1)
+
 
 ## Architecture
 
