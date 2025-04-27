@@ -23,7 +23,9 @@ This application displays cryptocurrency prices fetched from the CoinGecko API a
 - **Styling:** CSS Modules, Plain CSS
 - **API:** CoinGecko API (v3)
 - **Build Tool:** Create React App
- ![Gray Minimalist Notification Spa Your Story ](https://github.com/user-attachments/assets/6711e7d6-7bb1-4023-92b5-4105372f1acf)
+  
+  ![Gray Minimalist Notification Spa Your Story ](https://github.com/user-attachments/assets/7f53b2c5-05aa-4851-936f-ef2a3b77b808)
+
 
 ## Architecture
 
